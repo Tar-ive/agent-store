@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/index.json",
+      "destination": "/handpicked.json"
+    }
+  ]
+}

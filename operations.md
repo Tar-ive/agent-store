@@ -86,3 +86,4 @@
 - Document client usage in `rpc.md` and ensure legacy HTML links clearly point to the RPC-first flow.
 - Use `./tools/ops-agent/run_ops_agent.sh` to script `vercel link`, enable Web Analytics, and push production deploys (requires `VERCEL_TOKEN`, `VERCEL_PROJECT`, `VERCEL_ORG`).
 - Each HTML page now includes `<script defer src="/_vercel/insights/script.js"></script>` so Web Analytics runs natively without extra bundling.
+- `vercel.json` rewrite exposes `/index.json` by mapping to `handpicked.json` so Perplexity-style consumers can fetch the curated repo feed.
