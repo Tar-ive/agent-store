@@ -1,4 +1,6 @@
-# Agent Store Design Language
+# LangChain.md Agent Hub – Design Language
+
+> Community-operated catalog for LLM agents. LangChain.md has no official affiliation with LangChain or other AI vendors.
 
 ## Design Philosophy
 

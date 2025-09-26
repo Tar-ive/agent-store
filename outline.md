@@ -1,4 +1,6 @@
-# LangChain Agent Store - Project Outline
+# LangChain.md Agent Hub - Project Outline
+
+> Independent LLM agent directory operated under the langchain.md domain. Not affiliated with the LangChain organisation or any vendor.
 
 ## Project Structure
 
@@ -13,6 +15,14 @@
 │   ├── agents-collaboration.png
 │   ├── code-automation.png
 │   └── [searched images]
+├── data/                     # Generated catalog feeds
+│   ├── agent-sources.json    # Source registry (manual + static)
+│   └── agents.json           # Synced output consumed by site/RPC
+├── tools/                    # Utility scripts and automation
+│   ├── sync_agents.js        # GitHub ingestion → data/agents.json
+│   └── ops-agent/            # Ops Field Agent deploy + analytics runner
+├── descriptor.proto          # gRPC schema published at /descriptor.proto
+├── rpc.md                    # AgentDirectory RPC documentation
 ├── interaction.md            # Interaction design documentation
 ├── design.md                # Design language guide
 └── outline.md               # This project outline

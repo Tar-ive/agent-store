@@ -1,0 +1,4 @@
+ops-agent.log
+.env
+.vercel
+node_modules

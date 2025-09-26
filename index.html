@@ -3,11 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LangChain Agent Store - Discover the Future of AI Agents</title>
-    <meta name="description" content="Discover and deploy the best LangChain AI agents. Browse 500+ autonomous agents, multi-agent systems, and specialized tools for your next project.">
-    
+    <title>LangChain.md Agent Hub – Unofficial LLM Agent Store</title>
+    <meta name="description" content="LangChain.md is an independent hub for discovering open-source LLM agents. Browse cross-framework automations, multi-agent systems, and tools ready for deployment.">
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Vercel Web Analytics -->
+    <script defer src="/_vercel/insights/script.js"></script>
     
     <!-- Core Libraries -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
@@ -168,9 +171,9 @@
             <div class="flex justify-between items-center h-16">
                 <div class="flex items-center space-x-2">
                     <div class="w-8 h-8 bg-gradient-to-br from-teal-400 to-green-400 rounded-lg flex items-center justify-center">
-                        <span class="text-white font-bold text-sm">LC</span>
+                        <span class="text-white font-bold text-sm">LM</span>
                     </div>
-                    <span class="text-xl font-bold gradient-text">Agent Store</span>
+                    <span class="text-xl font-bold gradient-text">LangChain.md Hub</span>
                 </div>
                 
                 <div class="hidden md:flex items-center space-x-8">
@@ -190,7 +193,7 @@
                             </svg>
                         </div>
                     </div>
-                    <button class="btn-primary">Submit Agent</button>
+                    <button class="btn-primary">Submit Agent Listing</button>
                 </div>
             </div>
         </div>
@@ -207,7 +210,10 @@
                             <span id="typed-text" class="text-gray-900"></span>
                         </h1>
                         <p class="text-xl text-gray-600 leading-relaxed max-w-2xl">
-                            Explore 500+ LangChain AI agents built by the community. From autonomous systems to specialized tools, find the perfect agent for your next project.
+                            Explore open-source LLM agents from across the ecosystem. LangChain.md curates automations, research workflows, and multi-agent systems spanning LangChain, AutoGen, CrewAI, OpenAI Assistants, and more.
+                        </p>
+                        <p class="text-sm text-gray-500 max-w-2xl">
+                            LangChain.md is a community-maintained index owned by an independent creator. No affiliation with LangChain, OpenAI, Anthropic, or any vendor.
                         </p>
                     </div>
                     
@@ -215,8 +221,11 @@
                         <button class="btn-primary text-lg px-8 py-4" onclick="window.location.href='agents.html'">
                             Explore Agents
                         </button>
-                        <button class="btn-secondary text-lg px-8 py-4">
-                            Watch Demo
+                        <button class="btn-secondary text-lg px-8 py-4" onclick="window.location.href='operations.md'">
+                            Read Agent SEO Playbook
+                        </button>
+                        <button class="btn-secondary text-lg px-8 py-4" onclick="window.location.href='descriptor.proto'">
+                            Download descriptor.proto
                         </button>
                     </div>
                     
@@ -234,6 +243,7 @@
                             <div class="text-gray-600 font-medium">Categories</div>
                         </div>
                     </div>
+                    <p class="text-sm text-gray-500">Agents don’t browse—call <code>ListSkills(filter="langchain")</code> over gRPC and get Docker refs, SLA hashes, and reputation scores in one shot.</p>
                 </div>
                 
                 <div class="relative">
@@ -254,7 +264,7 @@
                     <span class="gradient-text">Featured Agents</span>
                 </h2>
                 <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Handpicked by our community, these agents represent the best of what LangChain has to offer
+                    Handpicked by our community, these agents represent the best of what the open-source LLM ecosystem is shipping right now
                 </p>
             </div>
             
@@ -426,7 +436,7 @@
                     <span class="gradient-text">How It Works</span>
                 </h2>
                 <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Get started with LangChain agents in three simple steps
+                    Get started with LLM agents from any framework in three simple steps
                 </p>
             </div>
             
@@ -497,18 +507,56 @@
         </div>
     </section>
 
+
+    <!-- RPC Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-start">
+                <div class="space-y-6">
+                    <h2 class="text-4xl font-bold gradient-text">Agents Don’t Browse, They RPC</h2>
+                    <p class="text-lg text-gray-600 leading-relaxed">
+                        Autonomous orchestrators should fetch the LangChain.md catalog via <code>langchainmd.directory.v1.AgentDirectory</code>.
+                        The signed protobuf descriptor lives at <code>https://langchain.md/descriptor.proto</code> so you can wire in a
+                        ListSkills call without ever touching HTML.
+                    </p>
+                    <ul class="list-disc list-inside text-gray-600 space-y-2">
+                        <li><strong>ListSkills</strong> returns Docker images, pricing, SLA hashes, and reputation scores.</li>
+                        <li><strong>GetSkill</strong> resolves a skill by slug or repo for targeted pickups.</li>
+                        <li><strong>StreamSkillEvents</strong> keeps caches warm with UPSERT/DELETE deltas.</li>
+                    </ul>
+                    <div class="flex flex-wrap gap-4">
+                        <a class="btn-primary" href="descriptor.proto">Fetch descriptor</a>
+                        <a class="btn-secondary" href="rpc.md">RPC guide</a>
+                        <a class="btn-secondary" href="data/agents.json">Sample payload</a>
+                    </div>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-2xl p-6 shadow-lg">
+                    <h3 class="text-xl font-semibold mb-4">grpcurl example</h3>
+                    <pre class="bg-gray-900 text-gray-100 p-4 rounded-xl text-sm overflow-x-auto"><code># List LangChain skills
+grpcurl \
+  -H "Authorization: Bearer $RPC_TOKEN" \
+  -proto descriptor.proto \
+  -d "{"filter":"langchain"}" \
+  langchain.md:443 \
+  langchainmd.directory.v1.AgentDirectory/ListSkills</code></pre>
+                    <p class="text-sm text-gray-500 mt-4">Response payload matches the <code>Skill</code> message: Docker ref, price per token, SLA hash, reputation score, and metadata.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="bg-gray-900 text-white py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center">
                 <div class="flex items-center justify-center space-x-2 mb-4">
                     <div class="w-8 h-8 bg-gradient-to-br from-teal-400 to-green-400 rounded-lg flex items-center justify-center">
-                        <span class="text-white font-bold text-sm">LC</span>
+                        <span class="text-white font-bold text-sm">LM</span>
                     </div>
-                    <span class="text-xl font-bold">Agent Store</span>
+                    <span class="text-xl font-bold">LangChain.md Hub</span>
                 </div>
-                <p class="text-gray-400 mb-4">Discover the future of AI agents</p>
-                <p class="text-gray-500 text-sm">© 2025 LangChain Agent Store. Built with passion by the community.</p>
+                <p class="text-gray-400 mb-4">Independent hub for LLM agent discovery</p>
+                <p class="text-gray-500 text-sm">© 2025 LangChain.md. Independent project with no official affiliation to LangChain or any vendor.</p>
             </div>
         </div>
     </footer>

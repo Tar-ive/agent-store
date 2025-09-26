@@ -1,4 +1,6 @@
-# Agent Store Interaction Design
+# LangChain.md Agent Hub – Interaction Design
+
+> Independent project focused on open-source LLM agent discovery. No official affiliation with LangChain or any vendor.
 
 ## Core Interactive Components
 

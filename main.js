@@ -1,4 +1,4 @@
-// Main JavaScript for LangChain Agent Store
+// Main JavaScript for LangChain.md Agent Hub
 class AgentStore {
     constructor() {
         this.init();
@@ -18,10 +18,10 @@ class AgentStore {
     setupTypewriter() {
         const typed = new Typed('#typed-text', {
             strings: [
-                'of AI Agents',
-                'of LangChain',
-                'of Automation',
-                'of Intelligence'
+                'for LLM Agents',
+                'for Open Source Builders',
+                'for Autonomous Workflows',
+                'for Agent SEO'
             ],
             typeSpeed: 80,
             backSpeed: 50,

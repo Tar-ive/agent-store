@@ -1,0 +1,134 @@
+syntax = "proto3";
+
+package langchainmd.directory.v1;
+
+option go_package = "github.com/tarive/langchain-md/rpc/directory;directory";
+option java_multiple_files = true;
+option java_outer_classname = "LangChainMdDirectoryProto";
+option java_package = "ai.langchainmd.directory.v1";
+
+// AgentDirectory exposes the LangChain.md agent index via RPC.
+service AgentDirectory {
+  // ListSkills returns a filtered collection of skills (agents) managed by LangChain.md.
+  rpc ListSkills(ListSkillsRequest) returns (ListSkillsResponse);
+
+  // GetSkill retrieves a single skill by slug or repository name.
+  rpc GetSkill(GetSkillRequest) returns (Skill);
+
+  // StreamSkillEvents emits upsert/delete events for orchestrators that keep a hot cache.
+  rpc StreamSkillEvents(StreamSkillEventsRequest) returns (stream SkillEvent);
+}
+
+// ListSkillsRequest filters.
+message ListSkillsRequest {
+  string filter = 1; // Optional free-form query syntax (e.g. "langchain AND multi-agent").
+  repeated string frameworks = 2; // Canonical frameworks (langchain, langgraph, autogen, crewai...).
+  repeated string capabilities = 3; // Controlled vocabulary (document_qa, orchestration, evaluation...).
+  repeated string status = 4; // Allowed values: active, beta, archived.
+  Pagination pagination = 5;
+  map<string, string> tags = 6; // Optional key/value matches (e.g. {"language": "python"}).
+}
+
+message ListSkillsResponse {
+  repeated Skill skills = 1;
+  string next_page_token = 2;
+  uint32 result_count = 3;
+  string generated_at = 4; // RFC 3339 timestamp.
+}
+
+message GetSkillRequest {
+  oneof lookup {
+    string slug = 1; // e.g. "langchain-chatchat".
+    string repo = 2; // e.g. "chatchat-space/Langchain-Chatchat".
+  }
+}
+
+message StreamSkillEventsRequest {
+  string cursor = 1; // Opaque cursor from previous stream invocation.
+  uint32 max_batch = 2; // Max events per message chunk (optional).
+}
+
+message SkillEvent {
+  enum Type {
+    TYPE_UNSPECIFIED = 0;
+    TYPE_UPSERT = 1;
+    TYPE_DELETE = 2;
+  }
+  Type type = 1;
+  string emitted_at = 2; // RFC 3339 timestamp.
+  Skill skill = 3; // Populated for UPSERT, optional for DELETE.
+  string sha256 = 4; // Hash of canonical Skill JSON payload.
+}
+
+message Skill {
+  string id = 1; // Stable UUID assigned by LangChain.md.
+  string slug = 2;
+  string name = 3;
+  string summary = 4;
+  string description = 5;
+  repeated string frameworks = 6;
+  repeated string capabilities = 7;
+  repeated string domains = 8;
+  string repo_url = 9;
+  string readme_url = 10;
+  string homepage = 11;
+  repeated Deployment deployments = 12;
+  Pricing pricing = 13;
+  Reputation reputation = 14;
+  repeated Contact contacts = 15;
+  License license = 16;
+  map<string, string> metadata = 17;
+  repeated Metric metrics = 18;
+}
+
+message Deployment {
+  string docker_image = 1; // e.g. ghcr.io/org/agent
+  string docker_digest = 2; // sha256 digest for reproducible pulls.
+  string recommended_tag = 3; // e.g. "stable".
+  string helm_chart = 4; // Optional Helm chart name.
+  repeated Endpoint endpoints = 5;
+}
+
+message Endpoint {
+  string type = 1; // grpc, http, websocket, lambda
+  string url = 2;
+  map<string, string> headers = 3; // Required static headers/bearer tokens.
+}
+
+message Pricing {
+  string currency = 1; // ISO 4217
+  double price_per_1k_tokens = 2;
+  double price_per_minute = 3;
+  double price_per_call = 4;
+  string billing_url = 5;
+}
+
+message Reputation {
+  double score = 1; // Normalized 0-1 score.
+  uint32 rating_count = 2;
+  string source = 3; // e.g. "langchain.md"
+  repeated string badges = 4; // e.g. ["verified", "hall_of_fame"].
+}
+
+message Contact {
+  string type = 1; // maintainer, security, support
+  string value = 2; // email, URL, or handle.
+}
+
+message License {
+  string spdx_id = 1;
+  string name = 2;
+  string url = 3;
+}
+
+message Metric {
+  string name = 1; // e.g. "uptime_30d"
+  double value = 2;
+  string unit = 3; // percentage, ms, tokens, etc.
+  string collected_at = 4; // RFC 3339 timestamp.
+}
+
+message Pagination {
+  uint32 page_size = 1; // Defaults to 50.
+  string page_token = 2; // Opaque continuation token.
+}

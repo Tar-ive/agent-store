@@ -3,11 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ReAct Research Agent - LangChain Agent Store</title>
-    <meta name="description" content="Advanced reasoning agent that combines thought and action for complex research tasks. Install this powerful LangChain agent today.">
-    
+    <title>Ops Field Agent - LangChain.md LLM Hub</title>
+    <meta name="description" content="LangChain.md's Ops Field Agent orchestrates Vercel deploys, enables analytics, and maintains SLA telemetry via scripted gRPC workflows.">
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Vercel Web Analytics -->
+    <script defer src="/_vercel/insights/script.js"></script>
     
     <!-- Core Libraries -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
@@ -266,9 +269,9 @@
             <div class="flex justify-between items-center h-16">
                 <div class="flex items-center space-x-2">
                     <div class="w-8 h-8 bg-gradient-to-br from-teal-400 to-green-400 rounded-lg flex items-center justify-center">
-                        <span class="text-white font-bold text-sm">LC</span>
+                        <span class="text-white font-bold text-sm">LM</span>
                     </div>
-                    <span class="text-xl font-bold gradient-text">Agent Store</span>
+                    <span class="text-xl font-bold gradient-text">LangChain.md Hub</span>
                 </div>
                 
                 <div class="hidden md:flex items-center space-x-8">
@@ -279,7 +282,7 @@
                 </div>
                 
                 <div class="flex items-center space-x-4">
-                    <button class="btn-primary text-sm px-4 py-2">Submit Agent</button>
+                    <button class="btn-primary text-sm px-4 py-2">Submit Agent Listing</button>
                 </div>
             </div>
         </div>
@@ -304,11 +307,11 @@
             <div class="grid lg:grid-cols-3 gap-12 items-start">
                 <div class="lg:col-span-2">
                     <div class="flex items-center space-x-4 mb-6">
-                        <div class="w-20 h-20 bg-gradient-to-br from-blue-400 to-purple-500 rounded-2xl flex items-center justify-center">
-                            <span class="text-white font-bold text-2xl">RA</span>
+                        <div class="w-20 h-20 bg-gradient-to-br from-orange-400 to-rose-500 rounded-2xl flex items-center justify-center">
+                            <span class="text-white font-bold text-2xl">OPS</span>
                         </div>
                         <div>
-                            <h1 class="text-4xl lg:text-5xl font-bold mb-2">ReAct Research Agent</h1>
+                            <h1 class="text-4xl lg:text-5xl font-bold mb-2">Ops Field Agent</h1>
                             <div class="flex items-center space-x-4">
                                 <div class="rating-stars">
                                     <svg class="star" viewBox="0 0 20 20">
@@ -327,20 +330,23 @@
                                         <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
                                     </svg>
                                 </div>
-                                <span class="text-sm font-medium">4.9 (127 reviews)</span>
+                                <span class="text-sm font-medium">4.7 (12 reviews)</span>
                             </div>
                         </div>
                     </div>
                     
-                    <p class="text-xl text-gray-600 mb-8 leading-relaxed">
-                        Advanced reasoning agent that combines thought and action for complex research tasks. Built with LangChain's ReAct framework, this agent excels at breaking down complex problems, planning actions, and executing research workflows with human-like reasoning.
+                    <p class="text-xl text-gray-600 mb-4 leading-relaxed">
+                        LangChain.md’s internal automation specialist that handles continuous delivery: linking repos to Vercel, enabling Web Analytics, triggering production deploys, and logging run hashes for SLA compliance.
+                    </p>
+                    <p class="text-sm text-gray-500 mb-8 leading-relaxed">
+                        Beta-stage operational agent maintained by the LangChain.md team. Use at your own risk; requires Vercel credentials and production safeguards.
                     </p>
                     
                     <div class="flex flex-wrap gap-3 mb-8">
-                        <span class="bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-sm font-medium">ReAct Agent</span>
-                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">Research</span>
-                        <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">Advanced</span>
-                        <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">Open Source</span>
+                        <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm font-medium">Operations</span>
+                        <span class="bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-sm font-medium">Deployment</span>
+                        <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm font-medium">Beta</span>
+                        <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">Automation</span>
                     </div>
                     
                     <div class="flex flex-col sm:flex-row gap-4">
@@ -348,13 +354,13 @@
                             <svg class="w-5 h-5 inline mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
                             </svg>
-                            Copy Install Command
+                            Copy Run Script
                         </button>
                         <button class="btn-secondary text-lg px-8 py-4" onclick="openPlayground()">
                             <svg class="w-5 h-5 inline mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
                             </svg>
-                            Try in Playground
+                            View Ops Guide
                         </button>
                     </div>
                 </div>
@@ -467,22 +473,24 @@
                     <div class="mb-8">
                         <h3 class="text-xl font-bold mb-4">Requirements</h3>
                         <ul class="list-disc list-inside text-gray-600 space-y-2">
-                            <li>Python 3.8 or higher</li>
-                            <li>LangChain library (latest version)</li>
-                            <li>OpenAI API key or compatible LLM provider</li>
-                            <li>Internet connection for external API calls</li>
+                            <li>Node.js 18+ and npm</li>
+                            <li>Vercel CLI installed globally (`npm install -g vercel`)</li>
+                            <li>Valid `VERCEL_TOKEN`, `VERCEL_PROJECT`, and `VERCEL_ORG` environment values</li>
+                            <li>Access to the LangChain.md repo (or fork) with deploy permissions</li>
                         </ul>
                     </div>
                     
                     <div class="mb-8">
-                        <h3 class="text-xl font-bold mb-4">Install via pip</h3>
+                        <h3 class="text-xl font-bold mb-4">Clone + Prepare</h3>
                         <div class="code-block">
                             <button class="copy-button" onclick="copyCode(this)">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
                                 </svg>
                             </button>
-                            <pre>pip install langchain-react-research-agent</pre>
+                            <pre>git clone https://github.com/tarive/langchain-md.git
+cd langchain-md
+npm install -g vercel</pre>
                         </div>
                     </div>
                     
@@ -494,11 +502,13 @@
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
                                 </svg>
                             </button>
-                            <pre># Set your API key
-export OPENAI_API_KEY="your-api-key-here"
+                            <pre># Required environment variables
+export VERCEL_TOKEN="your-vercel-token"
+export VERCEL_PROJECT="langchain-md"
+export VERCEL_ORG="your-team-slug"
 
-# Or create a .env file
-echo "OPENAI_API_KEY=your-api-key-here" > .env</pre>
+# Optional: log file from previous runs
+rm -f ops-agent.log</pre>
                         </div>
                     </div>
                 </div>
@@ -507,207 +517,85 @@ echo "OPENAI_API_KEY=your-api-key-here" > .env</pre>
             <!-- Documentation Tab -->
             <div id="documentation" class="tab-content">
                 <div class="max-w-4xl">
-                    <h2 class="text-3xl font-bold mb-8">API Documentation</h2>
-                    
+                    <h2 class="text-3xl font-bold mb-8">Ops Playbook</h2>
+                    <p class="text-gray-600 mb-6">Ops Field Agent wraps the LangChain.md deployment workflow into a reproducible CLI. Plug in your Vercel credentials and it links the repo, enables Web Analytics, and ships a production build.</p>
                     <div class="space-y-8">
                         <div>
-                            <h3 class="text-xl font-bold mb-4">Initialization</h3>
+                            <h3 class="text-xl font-bold mb-4">Execute Run</h3>
                             <div class="code-block">
                                 <button class="copy-button" onclick="copyCode(this)">
                                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
                                     </svg>
                                 </button>
-                                <pre>from react_research_agent import ReActResearchAgent
-
-# Initialize the agent
-agent = ReActResearchAgent(
-    model="gpt-4",
-    temperature=0.7,
-    max_iterations=10,
-    verbose=True
-)</pre>
+                                <pre>cd langchain-md
+export VERCEL_TOKEN=your-token
+export VERCEL_PROJECT=langchain-md
+export VERCEL_ORG=langchainmd
+./tools/ops-agent/run_ops_agent.sh</pre>
                             </div>
                         </div>
-                        
-                        <div>
-                            <h3 class="text-xl font-bold mb-4">Basic Usage</h3>
-                            <div class="code-block">
-                                <button class="copy-button" onclick="copyCode(this)">
-                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
-                                    </svg>
-                                </button>
-                                <pre># Simple research query
-result = agent.research(
-    query="What are the latest developments in quantum computing?",
-    max_sources=5,
-    include_analysis=True
-)
 
-print(result.summary)
-print(result.sources)
-print(result.analysis)</pre>
-                            </div>
-                        </div>
-                        
                         <div>
-                            <h3 class="text-xl font-bold mb-4">Configuration Options</h3>
+                            <h3 class="text-xl font-bold mb-4">Environment Variables</h3>
                             <div class="bg-white p-6 rounded-xl border border-gray-200">
                                 <div class="overflow-x-auto">
                                     <table class="w-full text-sm">
                                         <thead>
                                             <tr class="border-b">
-                                                <th class="text-left py-2 font-semibold">Parameter</th>
-                                                <th class="text-left py-2 font-semibold">Type</th>
-                                                <th class="text-left py-2 font-semibold">Default</th>
+                                                <th class="text-left py-2 font-semibold">Variable</th>
                                                 <th class="text-left py-2 font-semibold">Description</th>
                                             </tr>
                                         </thead>
-                                        <tbody class="space-y-2">
+                                        <tbody>
                                             <tr class="border-b">
-                                                <td class="py-2 font-mono">model</td>
-                                                <td class="py-2">string</td>
-                                                <td class="py-2">"gpt-4"</td>
-                                                <td class="py-2">LLM model to use</td>
+                                                <td class="py-2 font-mono">VERCEL_TOKEN</td>
+                                                <td class="py-2">Personal or team token with deploy + analytics scope.</td>
                                             </tr>
                                             <tr class="border-b">
-                                                <td class="py-2 font-mono">temperature</td>
-                                                <td class="py-2">float</td>
-                                                <td class="py-2">0.7</td>
-                                                <td class="py-2">Model temperature (0-1)</td>
+                                                <td class="py-2 font-mono">VERCEL_PROJECT</td>
+                                                <td class="py-2">Vercel project slug (e.g. <code>langchain-md</code>).</td>
                                             </tr>
                                             <tr class="border-b">
-                                                <td class="py-2 font-mono">max_iterations</td>
-                                                <td class="py-2">integer</td>
-                                                <td class="py-2">10</td>
-                                                <td class="py-2">Maximum reasoning iterations</td>
-                                            </tr>
-                                            <tr class="border-b">
-                                                <td class="py-2 font-mono">verbose</td>
-                                                <td class="py-2">boolean</td>
-                                                <td class="py-2">False</td>
-                                                <td class="py-2">Enable detailed logging</td>
+                                                <td class="py-2 font-mono">VERCEL_ORG</td>
+                                                <td class="py-2">Team/organization slug used for <code>--scope</code>.</td>
                                             </tr>
                                         </tbody>
                                     </table>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Examples Tab -->
-            <div id="examples" class="tab-content">
-                <div class="max-w-4xl">
-                    <h2 class="text-3xl font-bold mb-8">Usage Examples</h2>
-                    
-                    <div class="space-y-8">
-                        <div class="bg-white p-6 rounded-xl border border-gray-200">
-                            <h3 class="text-xl font-bold mb-4">Example 1: Market Research</h3>
-                            <div class="code-block">
-                                <button class="copy-button" onclick="copyCode(this)">
-                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
-                                    </svg>
-                                </button>
-                                <pre># Market research for electric vehicles
-research_task = """
-Analyze the electric vehicle market in 2024, including:
-1. Market size and growth projections
-2. Key players and their market share
-3. Consumer adoption trends
-4. Regulatory landscape
-5. Future outlook
-"""
 
-result = agent.research(
-    query=research_task,
-    max_sources=8,
-    include_analysis=True,
-    save_to_file="ev_market_analysis_2024.md"
-)
-
-print(f"Research completed in {result.iterations} iterations")
-print(f"Sources used: {len(result.sources)}")
-print(f"Analysis length: {len(result.analysis)} characters")</pre>
-                            </div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-4">What the Agent Does</h3>
+                            <ul class="list-disc list-inside text-gray-600 space-y-2">
+                                <li>`vercel link --yes` to bind the repo to the configured project.</li>
+                                <li>`vercel analytics enable --yes` to guarantee Web Analytics stays active.</li>
+                                <li>`vercel deploy --prod --yes` to ship the current working tree.</li>
+                                <li>Append run output to `ops-agent.log` for incident correlation.</li>
+                            </ul>
                         </div>
-                        
-                        <div class="bg-white p-6 rounded-xl border border-gray-200">
-                            <h3 class="text-xl font-bold mb-4">Example 2: Academic Literature Review</h3>
+
+                        <div>
+                            <h3 class="text-xl font-bold mb-4">Example Log Snippet</h3>
                             <div class="code-block">
                                 <button class="copy-button" onclick="copyCode(this)">
                                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
                                     </svg>
                                 </button>
-                                <pre># Literature review on machine learning in healthcare
-literature_review = """
-Conduct a comprehensive literature review on the application of 
-machine learning in medical diagnosis. Focus on:
-- Recent breakthroughs (2020-2024)
-- Accuracy improvements over traditional methods
-- Real-world implementations
-- Challenges and limitations
-- Future research directions
-"""
-
-result = agent.research(
-    query=literature_review,
-    max_sources=12,
-    include_analysis=True,
-    academic_focus=True,
-    save_to_file="ml_healthcare_literature_review.md"
-)
-
-# Generate summary for quick review
-summary = agent.summarize(result.analysis, max_length=500)
-print("Literature Review Summary:")
-print(summary)</pre>
-                            </div>
-                        </div>
-                        
-                        <div class="bg-white p-6 rounded-xl border border-gray-200">
-                            <h3 class="text-xl font-bold mb-4">Example 3: Competitive Analysis</h3>
-                            <div class="code-block">
-                                <button class="copy-button" onclick="copyCode(this)">
-                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
-                                    </svg>
-                                </button>
-                                <pre># Competitive analysis for AI writing tools
-competitors = ["OpenAI GPT", "Claude", "Gemini", "Jasper", "Copy.ai"]
-
-analysis_tasks = []
-for competitor in competitors:
-    task = f"""
-    Research {competitor} as an AI writing tool competitor:
-    - Pricing and plans
-    - Key features and capabilities
-    - Target market and use cases
-    - Strengths and weaknesses
-    - User reviews and feedback
-    """
-    analysis_tasks.append(task)
-
-# Run parallel research
-results = agent.research_parallel(
-    queries=analysis_tasks,
-    max_workers=3,
-    save_individual_files=True
-)
-
-# Generate comparative analysis
-comparison = agent.compare_results(results)
-print(comparison)</pre>
+                                <pre>[ops-agent] Using project=langchain-md, org=langchainmd
+[ops-agent] Linking local repo to Vercel project...
+✔ Linked to langchain-md (production)
+[ops-agent] Enabling Vercel Web Analytics (idempotent)...
+✔ Analytics already enabled
+[ops-agent] Deploying to production...
+✔ Deployment complete https://langchain-md.vercel.app</pre>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            
             <!-- Reviews Tab -->
             <div id="reviews" class="tab-content">
                 <div class="max-w-4xl">
@@ -890,12 +778,12 @@ print(comparison)</pre>
             <div class="text-center">
                 <div class="flex items-center justify-center space-x-2 mb-4">
                     <div class="w-8 h-8 bg-gradient-to-br from-teal-400 to-green-400 rounded-lg flex items-center justify-center">
-                        <span class="text-white font-bold text-sm">LC</span>
+                        <span class="text-white font-bold text-sm">LM</span>
                     </div>
-                    <span class="text-xl font-bold">Agent Store</span>
+                    <span class="text-xl font-bold">LangChain.md Hub</span>
                 </div>
-                <p class="text-gray-400 mb-4">Discover the future of AI agents</p>
-                <p class="text-gray-500 text-sm">© 2025 LangChain Agent Store. Built with passion by the community.</p>
+                <p class="text-gray-400 mb-4">Independent hub for LLM agent discovery</p>
+                <p class="text-gray-500 text-sm">© 2025 LangChain.md. Independent project with no official affiliation to LangChain or any vendor.</p>
             </div>
         </div>
     </footer>
@@ -1040,7 +928,7 @@ print(comparison)</pre>
 
         // Global functions
         function copyInstallCommand() {
-            const installCommand = 'pip install langchain-react-research-agent';
+            const installCommand = './tools/ops-agent/run_ops_agent.sh';
             navigator.clipboard.writeText(installCommand).then(() => {
                 window.agentStore.showNotification('Installation command copied to clipboard!', 'success');
             }).catch(() => {
@@ -1049,7 +937,7 @@ print(comparison)</pre>
         }
 
         function openPlayground() {
-            window.agentStore.showNotification('Playground coming soon!', 'info');
+            window.location.href = 'operations.md';
         }
 
         function copyCode(button) {

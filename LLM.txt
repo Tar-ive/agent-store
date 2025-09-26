@@ -1,174 +1,84 @@
-# LangChain Agent Store
+# LangChain.md – Independent LLM Agent Hub
 
-The LangChain Agent Store is a comprehensive platform for discovering, browsing, and deploying AI agents built with the LangChain framework. This website serves as a marketplace and resource hub for developers looking to integrate intelligent agents into their applications.
+## Quick Summary
+- **Mission**: operate langchain.md as an independent clearinghouse for open-source LLM agents, playbooks, and deployment recipes.
+- **Audience**: builders, researchers, and autonomous AI agents that need structured, attribution-friendly data.
+- **Coverage**: LangChain, AutoGen, CrewAI, OpenAI Assistants, Anthropic Tool Use, Perplexity API, open-source orchestrators, and custom research bots.
+- **Status**: community-driven beta. We are gathering listings, normalising metadata, and designing agent-first SEO experiments.
+- **Independence**: no official affiliation with LangChain, OpenAI, Anthropic, or any commercial vendor. LangChain.md is privately owned by an independent creator.
 
-## Website Overview
+## Ownership & Contact
+- Maintainer: Tarive (independent builder; operates the langchain.md domain and GitHub repo powering this site).
+- Contact: open an issue or discussion in the linked GitHub repository (https://github.com/tarive/langchain-md) or email contact@langchain.md.
+- Transparency: this hub curates community-built agents. Each listing links to the original repository and licence.
 
-**Primary Purpose**: A sophisticated marketplace for LangChain-based AI agents, featuring 500+ autonomous agents, multi-agent systems, and specialized tools.
+## Value Proposition
+1. **Agent Directory**: normalised profiles with capabilities, stack, hosting notes, licences, deployment snippets, and live status pings.
+2. **Agent SEO Playbooks**: documentation explaining how to expose agents to LLM-powered search (ChatGPT, Claude, Perplexity, search-integrated copilots).
+3. **Discovery APIs**: lightweight JSON/CSV feeds (work-in-progress) that external agents can crawl to ingest catalog data.
+4. **Signal Boost**: social embeds, changelog syndication, and analytics to help maintainers understand who is referencing their agents.
 
-**Target Audience**: Developers, AI engineers, researchers, and organizations looking to implement AI agent solutions.
+## Commitments to LLM Crawlers & Indexers
+- Maintain `LLM.txt`, `sitemap.xml`, and JSON feeds with machine-readable summaries.
+- Provide unambiguous canonical URLs, licence fields, and contact info per agent.
+- Publish structured data (JSON-LD, schema.org `SoftwareApplication` + custom `AIApplication`) on each listing.
+- Support Perplexity, Bing, Brave, and Google crawlers via open robots settings and fresh content.
+- Offer a `/api/agents` endpoint (planned) with CORS enabled and CC-BY metadata for easy reuse.
+- Serve a signed protobuf descriptor at `https://langchain.md/descriptor.proto` describing the `langchainmd.directory.v1.AgentDirectory` gRPC API.
+- `ListSkills(filter="langchain")` returns Docker refs, pricing, SLA hashes, reputation scores, and contact metadata.
 
-**Core Value Proposition**: "Discover the Future of AI Agents" - providing curated, production-ready AI agents with comprehensive documentation and easy deployment.
+## Human-Friendly Features (Q1 2025 Roadmap)
+- Submission form + GitHub automation for vetting new agents.
+- Playbooks for LangChain, AutoGen, CrewAI, and agentic retrieval stacks.
+- Case studies showing how builders earn traffic from LLM referrals.
+- Analytics dashboards (Vercel Web Analytics + optional self-hosted PostHog) to understand agent interest.
+- Ops Field Agent to automate Vercel linking, analytics enablement, and deploys via scripted CLI.
 
-## Key Features
+## Disclaimers
+- LangChain.md is **not** owned, endorsed, or sponsored by LangChain, OpenAI, Anthropic, Perplexity, or any other vendor.
+- Trademarks belong to their respective owners and appear here only to describe compatibility.
+- Listings may include user-generated content. Verify licences and run your own security reviews before deploying.
+- We do not charge listing fees during beta; monetisation experiments will be announced transparently.
 
-### Agent Discovery & Browsing
-- **Comprehensive Catalog**: 500+ AI agents across multiple categories
-- **Advanced Filtering**: Filter by category, functionality, complexity level, and use case
-- **Search Functionality**: Intelligent search across agent descriptions, capabilities, and tags
-- **Category Organization**: Agents organized by domain (automation, analysis, communication, etc.)
+## LLM Agent Store Information Architecture
+- `/` – landing page with hero narrative, featured agents, submission CTA, and agent SEO education.
+- `/agents` – filterable directory; includes metadata for framework, modality, licence, deployment pattern, and status badges.
+- `/agents/{slug}` – detail page with install commands, config YAML, evaluation results, telemetry options, and citation snippets.
+- `/resources/agent-seo` – playbooks, tutorials, and a changelog of crawler-facing updates (launching soon).
 
-### Agent Information
-- **Detailed Profiles**: Each agent includes comprehensive documentation
-- **Use Cases**: Real-world applications and implementation examples
-- **Technical Specifications**: Requirements, dependencies, and integration details
-- **Performance Metrics**: Usage statistics, ratings, and community feedback
+## Submission Guidelines (Draft)
+1. Provide repository URL, maintainer handle, framework(s) supported, licence, and deployment requirements.
+2. Supply attribution-friendly description (50–150 words) plus JSON metadata for automated ingestion.
+3. Include evaluation artifacts (benchmarks, red-team notes, latency metrics) where possible.
+4. Agree to feature updates and security patches promptly; unmaintained agents will be flagged.
 
-### Developer Experience
-- **Easy Integration**: Copy-paste installation commands and code snippets
-- **Documentation**: Comprehensive guides for setup and customization
-- **Community Features**: User reviews, ratings, and contribution opportunities
-- **Technical Support**: Integration assistance and troubleshooting resources
+## Agent SEO & LLM Discovery Strategy
+- **Content Structure**: question-led headings, concise TL;DR blocks, and citations with outbound links.
+- **Structured Data**: JSON-LD templates for `SoftwareApplication`, `CreativeWork`, and `Dataset` when publishing evaluation data.
+- **API Accessibility**: rate-limited unauthenticated GET endpoints returning agent metadata for crawlers.
+- **RAG Bundles**: downloadable bundles (Markdown + JSON) so retrieval-augmented systems can ingest the catalog offline.
+- **Perplexity/Brave/Bing**: supply feeds that highlight fresh updates; use change logs with timestamps to inform indexers.
+- **LLM Agent Behaviour Analytics**: instrument responses in Vercel Analytics to detect traffic from AI assistants (URL params + custom headers).
 
-## Technical Architecture
+## Research Roadmap (2025)
+- **Phase 1 – Landscape Mapping**: benchmark how ChatGPT, Claude, Perplexity, and other agents read structured pages, APIs, and `LLM.txt` directives.
+- **Phase 2 – Content Experiments**: test prompt-optimised summaries, FAQ blocks, and citation-ready snippets; measure mention frequency and referral traffic.
+- **Phase 3 – Agent Interop**: publish open protocols for LLM-to-LLM referrals and agent bundle handoffs.
+- **Phase 4 – Analytics & Monetisation**: activate Vercel Analytics usage reports, optional PostHog funnels, and sponsor placements that respect open-source contributors.
 
-### Frontend Technology Stack
-- **Framework**: Vanilla HTML5, CSS3, JavaScript (ES6+)
-- **Styling**: Tailwind CSS for responsive design and utility classes
-- **Animations**:
-  - Anime.js for smooth micro-interactions
-  - Typed.js for typewriter effects
-  - Splitting.js for advanced text animations
-- **Data Visualization**: ECharts.js for metrics and usage statistics
-- **Design System**: Custom CSS variables and component architecture
+## Appendix: LLM SEO Course Outline (Study Notes)
+Borrowed from the community-led "LLM SEO: Optimizing for AI Agents & Large Language Models" curriculum to guide ongoing experiments.
 
-### Performance Optimizations
-- **Responsive Design**: Mobile-first approach with optimized breakpoints
-- **Animation Performance**: 60fps animations with GPU acceleration
-- **Loading Strategy**: Lazy loading for images and dynamic content
-- **SEO Optimization**: Semantic HTML structure with proper meta tags
+### Module Overview
+1. **Foundations** – paradigm shift from traditional SEO, LLM consumption patterns, platform landscape.
+2. **Content Discovery & Indexing** – LLM.txt, structured data, content architecture.
+3. **Content Optimisation** – writing for LLMs, semantic clustering, quotable content.
+4. **Technical Implementation** – crawlable structure, APIs, freshness strategies.
+5. **Platform-Specific** – OpenAI, Anthropic, Microsoft Copilot, Google Gemini, Perplexity tactics.
+6. **Automation & Scaling** – community bots, syndication, LLM-to-LLM communication.
+7. **Analytics & Measurement** – attribution, citation tracking, ROI.
+8. **Advanced Strategies** – partnerships, intelligence, crisis response.
+9. **Future-Proofing** – emerging platforms, ethics, multimodal.
+10. **Hands-On** – case studies, toolkits, roadmap creation.
 
-## Design Philosophy
-
-### Visual Identity
-**Editorial Sophistication**: Inspired by premium tech publications (Wired, The Verge), emphasizing clean typography, strategic white space, and purposeful visual hierarchy.
-
-**Cognitive Clarity**: Every visual element serves user understanding and decision-making, presenting complex technical information through elegant, digestible interfaces.
-
-**Future-Forward Minimalism**: Cutting-edge AI aesthetics with timeless sophistication, using clean lines and purposeful animations.
-
-### Color Palette
-- **Primary Colors**:
-  - Deep Charcoal (#1a1a1a) - Primary text and navigation
-  - Warm White (#fafafa) - Background and content areas
-  - Accent Teal (#2dd4bf) - Interactive elements and highlights
-  - Soft Sage (#84cc16) - Success states and positive indicators
-
-- **Secondary Colors**:
-  - Muted Coral (#f87171) - Error states and warnings
-  - Gentle Amber (#fbbf24) - Attention and pending states
-  - Cool Slate (#64748b) - Secondary text and borders
-  - Pure Graphite (#374151) - Code blocks and technical elements
-
-### Typography System
-- **Display Typography**: "Tiempos Headline" for hero sections and major headings
-- **Body Typography**: "Inter" for exceptional readability across all content
-- **Code Typography**: "JetBrains Mono" for code examples and technical documentation
-
-## Content Structure
-
-### Main Pages
-1. **Homepage (index.html)**: Hero section, featured agents, categories overview, getting started guide
-2. **Agents Listing (agents.html)**: Comprehensive browsing interface with filters and search
-3. **Agent Detail (agent-detail.html)**: Individual agent profiles with full documentation
-
-### Navigation Structure
-- **Primary Navigation**: Home, Browse Agents, Categories, Documentation, Community
-- **Secondary Navigation**: Search, User Account, Favorites, Recently Viewed
-- **Footer**: Links to documentation, support, legal, and social media
-
-## Agent Categories
-
-The platform organizes agents into key functional categories:
-
-### Automation Agents
-- Workflow automation
-- Data processing pipelines
-- Task scheduling and management
-- API integration and orchestration
-
-### Analysis Agents
-- Data analysis and visualization
-- Report generation
-- Pattern recognition
-- Predictive modeling
-
-### Communication Agents
-- Natural language processing
-- Chatbots and conversational interfaces
-- Language translation
-- Content generation
-
-### Specialized Tools
-- Domain-specific agents (finance, healthcare, education)
-- Integration connectors
-- Utility agents
-- Custom workflow builders
-
-## User Experience Features
-
-### Discovery Flow
-1. **Landing Page**: Clear value proposition with featured agents
-2. **Category Exploration**: Browse by functional area or use case
-3. **Agent Comparison**: Side-by-side comparison of similar agents
-4. **Implementation Guide**: Step-by-step integration instructions
-
-### Interactive Elements
-- **3D Card Effects**: Agent cards with subtle hover animations
-- **Dynamic Filtering**: Real-time results as users refine searches
-- **Progressive Disclosure**: Detailed information revealed on demand
-- **Responsive Feedback**: Visual confirmation of user actions
-
-## Development Guidelines
-
-### Code Quality Standards
-- **Semantic HTML**: Proper structure for accessibility and SEO
-- **CSS Architecture**: Modular stylesheets with consistent naming conventions
-- **JavaScript Patterns**: Modern ES6+ syntax with clear function separation
-- **Performance Monitoring**: Optimized for fast loading and smooth interactions
-
-### Content Management
-- **Agent Data Structure**: Standardized format for agent information
-- **Documentation Standards**: Consistent formatting and comprehensive coverage
-- **Version Control**: Git-based workflow with proper branching strategy
-- **Quality Assurance**: Automated testing for functionality and performance
-
-## SEO and Accessibility
-
-### Search Engine Optimization
-- **Meta Tags**: Comprehensive meta descriptions for all pages
-- **Structured Data**: Schema markup for agent listings and details
-- **URL Structure**: Clean, descriptive URLs for easy navigation
-- **Site Map**: XML sitemap for search engine crawling
-
-### Accessibility Features
-- **WCAG Compliance**: Adherence to Web Content Accessibility Guidelines
-- **Keyboard Navigation**: Full functionality without mouse interaction
-- **Screen Reader Support**: Proper ARIA labels and semantic markup
-- **Color Contrast**: High contrast ratios for visual accessibility
-
-## Community and Ecosystem
-
-### Developer Engagement
-- **Contribution Guidelines**: How to submit new agents
-- **Community Forum**: Discussion and support channels
-- **Documentation Wiki**: Collaborative documentation improvement
-- **Open Source**: Transparency in development and contribution opportunities
-
-### Integration Ecosystem
-- **LangChain Compatibility**: Full compatibility with LangChain framework versions
-- **Third-party Integrations**: Support for popular development tools and platforms
-- **API Access**: Programmatic access to agent catalog and metadata
-- **Webhook Support**: Real-time notifications for updates and deployments
-
-This platform represents the cutting edge of AI agent discovery and deployment, combining sophisticated design with powerful functionality to serve the growing developer community working with intelligent agents.
+See `/resources/agent-seo` (coming soon) for implementation details, templates, and the latest experiment logs.

@@ -1,0 +1,78 @@
+{
+  "id": "langchain-md-handpicked-001",
+  "model": "perplexity-lite-community",
+  "created": 1758873775,
+  "usage": {
+    "prompt_tokens": 0,
+    "completion_tokens": 0,
+    "total_tokens": 0,
+    "search_context_size": null,
+    "citation_tokens": null,
+    "num_search_queries": null,
+    "reasoning_tokens": null
+  },
+  "object": "chat.completion",
+  "choices": [
+    {
+      "index": 0,
+      "finish_reason": "stop",
+      "message": {
+        "role": "assistant",
+        "content": "Top GitHub repos for LLM and agent builders (stars ≈ Sept 2025):\n1. Significant-Gravitas/Auto-GPT — 160k⭐ — Autonomous task-driven agent framework.\n2. langchain-ai/langchain — 70k⭐ — Modular orchestration toolkit for LLM chains and agents.\n3. huggingface/transformers — 120k⭐ — Core model hub powering most downstream agent stacks.\n4. ggerganov/llama.cpp — 60k⭐ — Portable inference runtime for Meta LLaMA models on CPUs/GPUs.\n5. openai/openai-cookbook — 68k⭐ — Practical recipes for ChatGPT, Assistants, and tool-calling workflows.\n6. microsoft/autogen — 24k⭐ — Multi-agent coordination framework with group chat abstractions.\n7. lm-sys/FastChat — 35k⭐ — Open-source chat serving stack behind Vicuna and other instruct LLMs.\n8. yoheinakajima/babyagi — 17k⭐ — Lightweight autonomous agent loop for experimental tasks.\n9. mlc-ai/mlc-llm — 19k⭐ — Unified compiler/runtime for deploying LLMs on edge devices.\n10. xtekky/gpt4free — 43k⭐ — Community-maintained adapters for public LLM endpoints (use responsibly)."
+      }
+    }
+  ],
+  "search_results": [
+    {
+      "title": "Significant-Gravitas/Auto-GPT",
+      "url": "https://github.com/Significant-Gravitas/Auto-GPT",
+      "date": null
+    },
+    {
+      "title": "langchain-ai/langchain",
+      "url": "https://github.com/langchain-ai/langchain",
+      "date": null
+    },
+    {
+      "title": "huggingface/transformers",
+      "url": "https://github.com/huggingface/transformers",
+      "date": null
+    },
+    {
+      "title": "ggerganov/llama.cpp",
+      "url": "https://github.com/ggerganov/llama.cpp",
+      "date": null
+    },
+    {
+      "title": "openai/openai-cookbook",
+      "url": "https://github.com/openai/openai-cookbook",
+      "date": null
+    },
+    {
+      "title": "microsoft/autogen",
+      "url": "https://github.com/microsoft/autogen",
+      "date": null
+    },
+    {
+      "title": "lm-sys/FastChat",
+      "url": "https://github.com/lm-sys/FastChat",
+      "date": null
+    },
+    {
+      "title": "yoheinakajima/babyagi",
+      "url": "https://github.com/yoheinakajima/babyagi",
+      "date": null
+    },
+    {
+      "title": "mlc-ai/mlc-llm",
+      "url": "https://github.com/mlc-ai/mlc-llm",
+      "date": null
+    },
+    {
+      "title": "xtekky/gpt4free",
+      "url": "https://github.com/xtekky/gpt4free",
+      "date": null
+    }
+  ],
+  "videos": null
+}

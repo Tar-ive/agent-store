@@ -1,0 +1,427 @@
+{
+  "generated_at": "2025-09-26T07:05:54.559Z",
+  "source_count": 7,
+  "agents": [
+    {
+      "slug": "langchain-chatchat",
+      "name": "Langchain-Chatchat",
+      "full_name": "chatchat-space/Langchain-Chatchat",
+      "html_url": "https://github.com/chatchat-space/Langchain-Chatchat",
+      "default_branch": "master",
+      "description": "Langchain-Chatchat（原Langchain-ChatGLM）基于 Langchain 与 ChatGLM, Qwen 与 Llama 等语言模型的 RAG 与 Agent 应用 | Langchain-Chatchat (formerly langchain-ChatGLM), local knowledge based LLM (like ChatGLM, Qwen and Llama) RAG and Agent app with langchain ",
+      "summary": "🌍 READ THIS IN ENGLISH 📃 LangChain-Chatchat (原 Langchain-ChatGLM) 基于 ChatGLM 等大语言模型与 Langchain 等应用框架实现，开源、可离线部署的 RAG 与 Agent 应用项目。 --- 概述 功能介绍 0.3.x 功能一览 已支持的模型推理框架与模型 快速上手 pip 安装部署 源码安装部署/开发部署 Docker 部署 项目里程碑 联系我们 🤖️ 一种利用 langchain 思想实现的基于本地知识库的问答应用，目标期望建立一套对中文场景与开源模型支持友好、可离线运行的知识库问答解决方案。 💡 受 GanymedeNil 的项目 document.ai 和 AlexZhangji 创建的 ChatGLM-6B Pull Request 启发，建立了全流程可使用开源模型实现的本地知识库问答应用。本项目的最新版本中可使用 Xinference、Ollama",
+      "stars": 36148,
+      "forks": 6031,
+      "open_issues": 83,
+      "last_pushed": "2025-03-25T15:45:51Z",
+      "homepage": "",
+      "license": "Apache-2.0",
+      "topics": [
+        "chatbot",
+        "chatchat",
+        "chatglm",
+        "chatgpt",
+        "embedding",
+        "faiss",
+        "fastchat",
+        "gpt",
+        "knowledge-base",
+        "langchain",
+        "langchain-chatglm",
+        "llama",
+        "llm",
+        "milvus",
+        "ollama",
+        "qwen",
+        "rag",
+        "retrieval-augmented-generation",
+        "streamlit",
+        "xinference"
+      ],
+      "source_readme": "https://raw.githubusercontent.com/chatchat-space/Langchain-Chatchat/master/README.md",
+      "frameworks": [
+        "LangChain",
+        "LangGraph",
+        "FastAPI"
+      ],
+      "categories": [
+        "multi-agent",
+        "rag",
+        "chat"
+      ],
+      "capabilities": [
+        "Conversational Agents",
+        "Knowledge Retrieval",
+        "Tool Use"
+      ],
+      "domains": [
+        "Enterprise Knowledge",
+        "Multilingual Chat"
+      ],
+      "status": "active",
+      "deployments": [
+        {
+          "docker_image": "ghcr.io/chatchat-space/langchain-chatchat",
+          "recommended_tag": "stable",
+          "helm_chart": "charts/langchain-chatchat"
+        }
+      ],
+      "pricing": {
+        "currency": "USD",
+        "price_per_1k_tokens": 0.002,
+        "price_per_call": 0
+      },
+      "reputation": {
+        "score": 0.92,
+        "rating_count": 340,
+        "badges": [
+          "verified",
+          "hall_of_fame"
+        ]
+      },
+      "metadata": {}
+    },
+    {
+      "slug": "ai-pdf-chatbot-langchain",
+      "name": "ai-pdf-chatbot-langchain",
+      "full_name": "mayooear/ai-pdf-chatbot-langchain",
+      "html_url": "https://github.com/mayooear/ai-pdf-chatbot-langchain",
+      "default_branch": "main",
+      "description": "AI PDF chatbot agent built with LangChain & LangGraph ",
+      "summary": "This monorepo is a customizable template example of an AI chatbot agent that \"ingests\" PDF documents, stores embeddings in a vector database (Supabase), and then answers user queries using OpenAI (or another LLM provider) utilising LangChain and LangGraph as orchestration frameworks. This template is also an accompanying example to the book Learning LangChain (O'Reilly): Building AI and LLM applications with LangChain and LangGraph.",
+      "stars": 16011,
+      "forks": 3186,
+      "open_issues": 33,
+      "last_pushed": "2025-02-20T18:19:58Z",
+      "homepage": "https://www.youtube.com/watch?v=OF6SolDiEwU",
+      "license": "MIT",
+      "topics": [
+        "agents",
+        "ai",
+        "chatbot",
+        "langchain",
+        "langgraph",
+        "nextjs",
+        "openai",
+        "pdf",
+        "typescript"
+      ],
+      "source_readme": "https://raw.githubusercontent.com/mayooear/ai-pdf-chatbot-langchain/main/README.md",
+      "frameworks": [
+        "LangChain",
+        "LangGraph",
+        "Streamlit"
+      ],
+      "categories": [
+        "document",
+        "assistant"
+      ],
+      "capabilities": [
+        "Document QA",
+        "Streaming Chat",
+        "Vector Search"
+      ],
+      "domains": [
+        "Knowledge Work",
+        "Productivity"
+      ],
+      "status": "active",
+      "deployments": [
+        {
+          "docker_image": "ghcr.io/mayooear/ai-pdf-chatbot",
+          "recommended_tag": "latest"
+        }
+      ],
+      "pricing": {
+        "currency": "USD",
+        "price_per_1k_tokens": 0.0035
+      },
+      "reputation": {
+        "score": 0.88,
+        "rating_count": 210
+      },
+      "metadata": {}
+    },
+    {
+      "slug": "streamlit-agent",
+      "name": "streamlit-agent",
+      "full_name": "langchain-ai/streamlit-agent",
+      "html_url": "https://github.com/langchain-ai/streamlit-agent",
+      "default_branch": "main",
+      "description": "Reference implementations of several LangChain agents as Streamlit apps",
+      "summary": "This repository contains reference implementations of various LangChain agents as Streamlit apps including: - basic_streaming.py: Simple streaming app with langchain.chat_models.ChatOpenAI (View the app) - basic_memory.py: Simple app using StreamlitChatMessageHistory for LLM conversation memory (View the app) - mrkl_demo.py: An agent that replicates the MRKL demo (View the app) - minimal_agent.py: A minimal agent with search (requires setting OPENAI_API_KEY env to run)",
+      "stars": 1551,
+      "forks": 723,
+      "open_issues": 8,
+      "last_pushed": "2024-08-04T14:55:12Z",
+      "homepage": "",
+      "license": "Apache-2.0",
+      "topics": [],
+      "source_readme": "https://raw.githubusercontent.com/langchain-ai/streamlit-agent/main/README.md",
+      "frameworks": [
+        "LangChain",
+        "Streamlit"
+      ],
+      "categories": [
+        "templates",
+        "demo"
+      ],
+      "capabilities": [
+        "Agent Demos",
+        "Chat Interfaces",
+        "Tool Calling"
+      ],
+      "domains": [
+        "Developer Experience",
+        "Prototyping"
+      ],
+      "status": "active",
+      "deployments": [
+        {
+          "docker_image": "ghcr.io/langchain-ai/streamlit-agent",
+          "recommended_tag": "main"
+        }
+      ],
+      "pricing": {
+        "currency": "USD",
+        "price_per_call": 0
+      },
+      "reputation": {
+        "score": 0.75,
+        "rating_count": 58
+      },
+      "metadata": {}
+    },
+    {
+      "slug": "langchain-production-starter",
+      "name": "langchain-production-starter",
+      "full_name": "steamship-core/langchain-production-starter",
+      "html_url": "https://github.com/steamship-core/langchain-production-starter",
+      "default_branch": "main",
+      "description": "Deploy LangChain Agents and connect them to Telegram",
+      "summary": "This starter project contains the necessary scaffolding to deploy LangChain Agents with memory and connect them to Telegram. Get started: https://twitter.com/eniascailliau/status/1658544730324492303 Add/Edit voice: https://twitter.com/eniascailliau/status/1658841969211088905 - 🧠 Support for OpenAI GPT-4 and GPT-3.5 - 🔗 Embeddable chat window - 🔌 Connect your chatbot to Telegram - 🔈 Give your Agent a voice",
+      "stars": 466,
+      "forks": 570,
+      "open_issues": 4,
+      "last_pushed": "2023-07-27T15:01:48Z",
+      "homepage": "",
+      "license": null,
+      "topics": [
+        "chatbot",
+        "gpt4",
+        "langchain",
+        "langchain-python",
+        "python",
+        "telegram-bot"
+      ],
+      "source_readme": "https://raw.githubusercontent.com/steamship-core/langchain-production-starter/main/README.md",
+      "frameworks": [
+        "LangChain",
+        "Steamship",
+        "Telegram"
+      ],
+      "categories": [
+        "deployment",
+        "starter"
+      ],
+      "capabilities": [
+        "Deployment Toolkit",
+        "Agent Hosting",
+        "DevOps"
+      ],
+      "domains": [],
+      "status": "active",
+      "deployments": [
+        {
+          "docker_image": "ghcr.io/steamship-core/langchain-production-starter",
+          "recommended_tag": "1.0.0"
+        }
+      ],
+      "pricing": {
+        "currency": "USD"
+      },
+      "reputation": {
+        "score": 0.81,
+        "rating_count": 112
+      },
+      "metadata": {}
+    },
+    {
+      "slug": "langchain-retrieval-agent-example",
+      "name": "langchain-retrieval-agent-example",
+      "full_name": "pinecone-io/langchain-retrieval-agent-example",
+      "html_url": "https://github.com/pinecone-io/langchain-retrieval-agent-example",
+      "default_branch": "main",
+      "description": "Chatbots can struggle with data freshness, knowledge about specific domains, or accessing internal documentation. By coupling agents with retrieval augmentation tools we no longer have these problems. One the other side, using \"naive\" retrieval augmentation without the use of an agent means we will retrieve contexts with every query. Again, this isn't always ideal as not every query requires access to external knowledge.",
+      "summary": "Chatbots can struggle with data freshness, knowledge about specific domains, or accessing internal documentation. By coupling agents with retrieval augmentation tools we no longer have these problems. One the other side, using \"naive\" retrieval augmentation without the use of an agent means we will retrieve contexts with every query. Again, this isn't always ideal as not every query requires access to external knowledge.",
+      "stars": 68,
+      "forks": 34,
+      "open_issues": 11,
+      "last_pushed": "2025-06-25T14:00:47Z",
+      "homepage": "",
+      "license": "MIT",
+      "topics": [],
+      "source_readme": "https://raw.githubusercontent.com/pinecone-io/langchain-retrieval-agent-example/main/README.md",
+      "frameworks": [
+        "LangChain",
+        "Pinecone"
+      ],
+      "categories": [
+        "rag",
+        "tutorial"
+      ],
+      "capabilities": [
+        "Retrieval Agent",
+        "Vector Search",
+        "Evaluation"
+      ],
+      "domains": [
+        "Knowledge Base"
+      ],
+      "status": "archived",
+      "deployments": [
+        {
+          "docker_image": "ghcr.io/pinecone-io/langchain-retrieval-agent-example",
+          "recommended_tag": "2024.04"
+        }
+      ],
+      "pricing": {
+        "currency": "USD"
+      },
+      "reputation": {
+        "score": 0.69,
+        "rating_count": 34
+      },
+      "metadata": {}
+    },
+    {
+      "slug": "fastapi-langgraph-template",
+      "name": "fastapi-langgraph-agent-production-ready-template",
+      "full_name": "wassim249/fastapi-langgraph-agent-production-ready-template",
+      "html_url": "https://github.com/wassim249/fastapi-langgraph-agent-production-ready-template",
+      "default_branch": "master",
+      "description": "A production-ready FastAPI template for building AI agent applications with LangGraph integration. This template provides a robust foundation for building scalable, secure, and maintainable AI agent services.",
+      "summary": "A production-ready FastAPI template for building AI agent applications with LangGraph integration. This template provides a robust foundation for building scalable, secure, and maintainable AI agent services. - Production-Ready Architecture - FastAPI for high-performance async API endpoints - LangGraph integration for AI agent workflows - Langfuse for LLM observability and monitoring - Structured logging with environment-specific formatting",
+      "stars": 1309,
+      "forks": 288,
+      "open_issues": 3,
+      "last_pushed": "2025-06-29T17:58:52Z",
+      "homepage": "",
+      "license": "MIT",
+      "topics": [
+        "agent",
+        "agentic-ai",
+        "docker",
+        "fastapi",
+        "fastapi-template",
+        "langchain",
+        "langchain-python",
+        "langgraph",
+        "langgraph-python",
+        "llm",
+        "memory"
+      ],
+      "source_readme": "https://raw.githubusercontent.com/wassim249/fastapi-langgraph-agent-production-ready-template/master/README.md",
+      "frameworks": [
+        "LangGraph",
+        "LangChain",
+        "FastAPI"
+      ],
+      "categories": [
+        "starter",
+        "api"
+      ],
+      "capabilities": [
+        "Production Template",
+        "Tool Execution",
+        "Monitoring"
+      ],
+      "domains": [
+        "Backend",
+        "Platform"
+      ],
+      "status": "active",
+      "deployments": [
+        {
+          "docker_image": "ghcr.io/wassim249/fastapi-langgraph-template",
+          "recommended_tag": "stable",
+          "helm_chart": "charts/fastapi-langgraph"
+        }
+      ],
+      "pricing": {
+        "currency": "USD",
+        "price_per_minute": 0.05
+      },
+      "reputation": {
+        "score": 0.86,
+        "rating_count": 97,
+        "badges": [
+          "verified"
+        ]
+      },
+      "metadata": {}
+    },
+    {
+      "slug": "ops-field-agent",
+      "name": "Ops Field Agent",
+      "full_name": "",
+      "html_url": "https://github.com/tarive/langchain-md/tree/master/tools/ops-agent",
+      "default_branch": "main",
+      "description": "LangChain.md’s internal operator that executes scripted Vercel deploys, analytics toggles, and observability routines.",
+      "summary": "CLI-driven operations agent that authenticates with Vercel, enables Web Analytics, triggers production deploys, and reports status hashes to the SLA ledger.",
+      "stars": 0,
+      "forks": 0,
+      "open_issues": 0,
+      "last_pushed": "2025-09-26T00:00:00Z",
+      "homepage": "",
+      "license": null,
+      "topics": [
+        "ops",
+        "deployment",
+        "vercel",
+        "automation"
+      ],
+      "source_readme": null,
+      "frameworks": [
+        "LangChain",
+        "LangGraph"
+      ],
+      "categories": [
+        "operations",
+        "deployment"
+      ],
+      "capabilities": [
+        "CI Automation",
+        "Analytics Enablement",
+        "Deployment Management"
+      ],
+      "domains": [
+        "Infrastructure",
+        "DevOps"
+      ],
+      "status": "beta",
+      "deployments": [
+        {
+          "docker_image": "ghcr.io/langchain-md/ops-field-agent",
+          "recommended_tag": "latest"
+        }
+      ],
+      "pricing": {
+        "currency": "USD",
+        "price_per_call": 0
+      },
+      "reputation": {
+        "score": 0.74,
+        "rating_count": 12,
+        "badges": [
+          "internal",
+          "automation"
+        ]
+      },
+      "metadata": {
+        "sla_hash": "sha256:placeholder",
+        "owner": "langchain.md"
+      }
+    }
+  ]
+}

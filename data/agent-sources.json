@@ -1,0 +1,179 @@
+{
+  "sources": [
+    {
+      "slug": "langchain-chatchat",
+      "repo": "chatchat-space/Langchain-Chatchat",
+      "status": "active",
+      "frameworks": ["LangChain", "LangGraph", "FastAPI"],
+      "categories": ["multi-agent", "rag", "chat"],
+      "capabilities": ["Conversational Agents", "Knowledge Retrieval", "Tool Use"],
+      "domains": ["Enterprise Knowledge", "Multilingual Chat"],
+      "deployments": [
+        {
+          "docker_image": "ghcr.io/chatchat-space/langchain-chatchat",
+          "recommended_tag": "stable",
+          "helm_chart": "charts/langchain-chatchat"
+        }
+      ],
+      "pricing": {
+        "currency": "USD",
+        "price_per_1k_tokens": 0.002,
+        "price_per_call": 0.0
+      },
+      "reputation": {
+        "score": 0.92,
+        "rating_count": 340,
+        "badges": ["verified", "hall_of_fame"]
+      }
+    },
+    {
+      "slug": "ai-pdf-chatbot-langchain",
+      "repo": "mayooear/ai-pdf-chatbot-langchain",
+      "status": "active",
+      "frameworks": ["LangChain", "LangGraph", "Streamlit"],
+      "categories": ["document", "assistant"],
+      "capabilities": ["Document QA", "Streaming Chat", "Vector Search"],
+      "domains": ["Knowledge Work", "Productivity"],
+      "deployments": [
+        {
+          "docker_image": "ghcr.io/mayooear/ai-pdf-chatbot",
+          "recommended_tag": "latest"
+        }
+      ],
+      "pricing": {
+        "currency": "USD",
+        "price_per_1k_tokens": 0.0035
+      },
+      "reputation": {
+        "score": 0.88,
+        "rating_count": 210
+      }
+    },
+    {
+      "slug": "streamlit-agent",
+      "repo": "langchain-ai/streamlit-agent",
+      "status": "active",
+      "frameworks": ["LangChain", "Streamlit"],
+      "categories": ["templates", "demo"],
+      "capabilities": ["Agent Demos", "Chat Interfaces", "Tool Calling"],
+      "domains": ["Developer Experience", "Prototyping"],
+      "deployments": [
+        {
+          "docker_image": "ghcr.io/langchain-ai/streamlit-agent",
+          "recommended_tag": "main"
+        }
+      ],
+      "pricing": {
+        "currency": "USD",
+        "price_per_call": 0.0
+      },
+      "reputation": {
+        "score": 0.75,
+        "rating_count": 58
+      }
+    },
+    {
+      "slug": "langchain-production-starter",
+      "repo": "steamship-core/langchain-production-starter",
+      "status": "active",
+      "frameworks": ["LangChain", "Steamship", "Telegram"],
+      "categories": ["deployment", "starter"],
+      "capabilities": ["Deployment Toolkit", "Agent Hosting", "DevOps"],
+      "deployments": [
+        {
+          "docker_image": "ghcr.io/steamship-core/langchain-production-starter",
+          "recommended_tag": "1.0.0"
+        }
+      ],
+      "pricing": {
+        "currency": "USD"
+      },
+      "reputation": {
+        "score": 0.81,
+        "rating_count": 112
+      }
+    },
+    {
+      "slug": "langchain-retrieval-agent-example",
+      "repo": "pinecone-io/langchain-retrieval-agent-example",
+      "status": "archived",
+      "frameworks": ["LangChain", "Pinecone"],
+      "categories": ["rag", "tutorial"],
+      "capabilities": ["Retrieval Agent", "Vector Search", "Evaluation"],
+      "domains": ["Knowledge Base"],
+      "deployments": [
+        {
+          "docker_image": "ghcr.io/pinecone-io/langchain-retrieval-agent-example",
+          "recommended_tag": "2024.04"
+        }
+      ],
+      "pricing": {
+        "currency": "USD"
+      },
+      "reputation": {
+        "score": 0.69,
+        "rating_count": 34
+      }
+    },
+    {
+      "slug": "fastapi-langgraph-template",
+      "repo": "wassim249/fastapi-langgraph-agent-production-ready-template",
+      "status": "active",
+      "frameworks": ["LangGraph", "LangChain", "FastAPI"],
+      "categories": ["starter", "api"],
+      "capabilities": ["Production Template", "Tool Execution", "Monitoring"],
+      "domains": ["Backend", "Platform"],
+      "deployments": [
+        {
+          "docker_image": "ghcr.io/wassim249/fastapi-langgraph-template",
+          "recommended_tag": "stable",
+          "helm_chart": "charts/fastapi-langgraph"
+        }
+      ],
+      "pricing": {
+        "currency": "USD",
+        "price_per_minute": 0.05
+      },
+      "reputation": {
+        "score": 0.86,
+        "rating_count": 97,
+        "badges": ["verified"]
+      }
+    },
+    {
+      "slug": "ops-field-agent",
+      "status": "beta",
+      "frameworks": ["LangChain", "LangGraph"],
+      "categories": ["operations", "deployment"],
+      "capabilities": ["CI Automation", "Analytics Enablement", "Deployment Management"],
+      "domains": ["Infrastructure", "DevOps"],
+      "deployments": [
+        {
+          "docker_image": "ghcr.io/langchain-md/ops-field-agent",
+          "recommended_tag": "latest"
+        }
+      ],
+      "pricing": {
+        "currency": "USD",
+        "price_per_call": 0.0
+      },
+      "reputation": {
+        "score": 0.74,
+        "rating_count": 12,
+        "badges": ["internal", "automation"]
+      },
+      "static": {
+        "name": "Ops Field Agent",
+        "description": "LangChain.md’s internal operator that executes scripted Vercel deploys, analytics toggles, and observability routines.",
+        "summary": "CLI-driven operations agent that authenticates with Vercel, enables Web Analytics, triggers production deploys, and reports status hashes to the SLA ledger.",
+        "html_url": "https://github.com/tarive/langchain-md/tree/master/tools/ops-agent",
+        "last_pushed": "2025-09-26T00:00:00Z",
+        "topics": ["ops", "deployment", "vercel", "automation"],
+        "metadata": {
+          "sla_hash": "sha256:placeholder",
+          "owner": "langchain.md"
+        }
+      }
+    }
+  ]
+}
